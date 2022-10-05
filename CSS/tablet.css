@@ -1,0 +1,16 @@
+
+.section-container figure {
+  display: none;
+}
+.video {
+   --padding-sesion: 0 30px;
+}
+.section-container,
+.sesion-preguntas-container,
+.container-invitado,
+.container-moderador,
+.subtitle-section-container,
+.maps_container,
+.bibliografia-container {
+  --padding-sesion: 30px 30px;
+}

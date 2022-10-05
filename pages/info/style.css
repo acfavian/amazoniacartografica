@@ -1,0 +1,801 @@
+@font-face {
+  font-family: 'Cormorant Garamond-lightItalic';
+  src: url(../../assets/fonts/CormorantGaramond-LightItalic.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-italic';
+  src: url(../../assets/fonts/CormorantGaramond-Italic.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-mediumItalic';
+  src: url(../../assets/fonts/CormorantGaramond-MediumItalic.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-semiBoldItalic';
+  src: url(../../assets/fonts/CormorantGaramond-SemiBoldItalic.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-boldItalic';
+  src: url(../../assets/fonts/CormorantGaramond-BoldItalic.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-light';
+  src: url(../../assets/fonts/CormorantGaramond-Light.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-regular';
+  src: url(../../assets/fonts/CormorantGaramond-Regular.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-medium';
+  src: url(../../assets/fonts/CormorantGaramond-Medium.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-semiBold';
+  src: url(../../assets/fonts/CormorantGaramond-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Cormorant Garamond-bold';
+  src: url(../../assets/fonts/CormorantGaramond-Bold.ttf);
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+:root {
+  --font-family-light-italic: 'Cormorant Garamond-lightItalic';
+  --font-family-italic: 'Cormorant Garamond-italic';
+  --font-family-medium-italic: 'Cormorant Garamond-mediumItalic';
+  --font-family-semibold-italic: 'Cormorant Garamond-semiBoldItalic';
+  --font-family-bold-italic: 'Cormorant Garamond-boldItalic';
+  --font-family-ligth: 'Cormorant Garamond-light';
+  --font-family-regular: 'Cormorant Garamond-regular';
+  --font-family-medium: 'Cormorant Garamond-medium';
+  --font-family-semibold: 'Cormorant Garamond-semiBold';
+  --font-family-bold: 'Cormorant Garamond-bold';
+
+  --principal-green: #6E7029;
+  --principal-background: #FFF4CC; 
+  --secondary-background: #D5C087;    
+
+  --secondary-animation-color: rgba(183, 166, 95, 0.6);
+  --background-head-color: #BAC7A3;
+
+  --padding-sesion: 50px 50px;
+
+  --bg-moderador-box: #e1cba4;
+
+  --background-subtitle-color: #735212;
+  --background-sub-box: #EADA9F;
+  --background-invited-box: #CEB582;
+
+  --bg-container-maps: #d2c07c;
+  --bg-box-map: #FFF4CC;
+
+  --video-detail: #3E83AF;
+  --video-background: #21272A;
+  
+  --text-color-paragraf: #282726;
+  --text-color-principal: #0e0e0e;
+
+  --general-page-width: 1200px;
+
+  --font-size-p: 2rem;
+  --font-size-title: 4rem;
+  --title-align: start;
+  --text-align-p: justify;
+
+  --margin-sesion-header: 0 50px 0 50px;
+  --width-sesion-header: 100%;
+  --width-nav-header: 100%;
+  --padding-nav-header: 50px;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: var(--font-family-regular), serif;
+}
+a {
+  color: var(--text-color-principal);
+  text-decoration: none;
+}
+
+#presentacion,
+#metodologia,
+#concepto_grafico,
+#programa,
+#creditos {
+  padding: 109px 0 0;
+  margin: -109px 0 0;
+}
+
+/* HEADER HOME */
+#header-desk  {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+
+  background-image: url(../../assets/general/Vintage_Paper_19.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--width-sesion-header);
+  margin: var(--margin-sesion-header);
+  gap: 15px;
+  height: 110px;
+}
+.logo {
+  width: 235px;
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  max-width: var(--width-nav-header);
+  width: 100%;
+  gap: 15px;
+}
+.info-detail-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: var(--principal-background);
+}
+#header-desk  .link-to-info {
+  width: inherit;
+  height: inherit;
+  border-radius: 30px;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.info-detail-container .info-notification-box {
+  height: 10px;
+  width: 10px;
+  border-radius: 30px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 2px 3px 3px 0px rgb(0 0 0 / 25%);
+}
+.nav-desk {
+  position: relative;
+  width: 100% ;
+  background-color: var(--principal-background);
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.nav-desk label {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  padding-left: var(--padding-nav-header);
+  cursor: pointer;
+}
+.nav-desk .menu {
+  display: none;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  background-color: var(--principal-background);
+  list-style: none;
+}
+#header-desk [id^=btns]:checked + .menu {
+  display: block;
+}
+.nav-desk .menu li {
+  font-size: 1.4rem;
+  line-height: 35px;
+  padding-left: var(--padding-nav-header);
+  cursor: pointer;
+}
+.nav-desk .menu li:nth-child(even) {
+  background-color: var(--secondary-background);
+}
+.nav-desk .menu li:hover {
+  background-color: var(--principal-green);
+}
+.nav-desk .menu li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--text-color-principal);
+  width: 100%;
+  display: block;
+}
+.nav-desk .menu li a:hover {
+  color: white;
+}
+.nav-desk .menu::before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  background-color: var(--principal-background);
+  right: 20px;
+  top: -10px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.menu::-webkit-scrollbar {
+  width: 8px;
+  background-color: #0d141f;
+}
+.nav-desk label::before {
+  content: "";
+  position: absolute;
+  --size: 10px;
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid #0e0e0e93;
+  right: 10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+.input {
+  display: none;
+}
+
+
+/* HEADER PHONE */
+
+#header-phone {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+
+  background-image: url(../../assets/general/Vintage_Paper_19.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#header-phone .header-phone-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  height: 80px;
+}
+#header-phone .logo-phone-container {
+  position: relative;
+  z-index: 10;
+}
+#header-phone .logo-phone {
+  width: 160px;
+}
+#header-phone .nav-phone {
+  background-color: var(--principal-background);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  
+}
+#header-phone .nav-phone label {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  align-self: flex-end;
+  display: block;
+  cursor: pointer;
+}
+#header-phone .burger-icon line {
+  stroke-opacity: 0.55;
+  stroke-width: 2;
+}
+#header-phone .nav-phone ul {
+  padding: 5px 10px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: var(--principal-green);
+  list-style: none;
+  z-index: 1;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+  overflow-y: scroll;
+  height: calc(100vh - 80px);
+}
+#header-phone [id^=btn]:checked + ul{
+  /* display: block; */
+  transform: translateY(0%);
+  transition: transform 1s;
+}
+#header-phone .nav-phone ul li {
+  font-size: 1.4rem;
+  padding: 5px 0px;
+  width: 100%;
+}
+#header-phone .nav-phone ul li a {
+  background-color: var(--principal-background);
+  padding: 3px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--text-color-principal);
+  width: 100%;
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+}
+#header-phone .img-info-menu-container {
+  width: 47%;
+  max-width: 100px;
+  height: 72px;
+  background-image: url(../../assets/info_proyecto/conceptos.png);
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#header-phone .menu-card-container {
+  display: flex;
+  align-items: center;
+}
+#header-phone .menu-card-container img {
+  width: 100px;
+}
+#header-phone .menu-card-container span {
+  padding: 0 5px 0 8px;
+}
+#header-phone h2 {
+  font-family: var(--font-family-semibold);
+  color: var(--principal-background);
+}
+#header-phone .nav-phone input {
+  display: none;
+}
+#header-phone {
+  display: none;
+}
+
+
+/*  -------------------  SIDEBAR */
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 300px;
+
+  padding-top: 110px;
+
+  background-image: url(../../assets/general/Vintage_Paper_19.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: initial;
+  z-index: 1;
+}
+
+.sidebar ul {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  gap: 8px;
+  
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sidebar ul a li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: end;
+  padding-right: 70px;
+}
+
+.sidebar ul a li:hover {
+  background-color: #A9A35A;
+  color: white;
+}
+
+/*  -------------------  INFO CONTAINER */
+
+main .main-joker-container {
+  display: flex;
+
+  margin: 0 auto 0 auto;  
+  padding-top: 110px;
+}
+
+main .main-joker-container .info_principal-container {
+  font-family: var(--font-family-regular);
+  width: 100%;
+  margin-left: 300px;
+  background-color: white;
+
+  font-size: 1.4rem;
+}
+
+
+@media (max-width: 900px) {
+  #header-desk {
+    display: none;
+  }
+  #header-phone {
+    display: flex;
+  }
+  #presentacion,
+  #metodologia,
+  #concepto_grafico,
+  #programa,
+  #creditos {
+  padding: 80px 0 0;
+  margin: -80px 0 0;
+  }
+  main .main-joker-container {
+    padding-top: 80px;
+  }
+}
+
+
+
+.info_principal-container .head-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 110px;
+  background-color: var(--background-head-color);
+}
+.info_principal-container .head-box h2 {
+  font-family: var(--font-family-bold);
+  font-size: 4.2rem;
+  margin-right: 50px;
+}
+.backgr-presentacion {
+  background-image: url(../../assets/info_proyecto/presentacion.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.backgr-metodologia {
+  background-image: url(../../assets/info_proyecto/metodologìa.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.backgr-concepto {
+  background-image: url(../../assets/info_proyecto/conceptos.png);
+  background-repeat: no-repeat;
+}
+
+.info_principal-container .info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: var(--padding-sesion);
+}
+
+.info-box .subtitle-presentacion {
+  font-family: var(--font-family-medium);
+  font-size: 2.8rem;
+  line-height: 3rem;
+  text-align: end;
+  padding-left: 15%;
+}
+
+.info-box .text-box {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  text-align: justify;
+  color: black;
+}
+
+.text-plus-image {
+  overflow: auto;
+}
+.text-plus-image ul {
+  list-style: inside;
+}
+.text-plus-image ul li {
+  margin-bottom: 8px;
+}
+
+.gap {
+  margin-bottom: 30px;
+}
+
+.text-plus-image .image1-float-right {
+  margin: 0 0px 0px 26px;
+  width: 43%;
+  float: right;
+}
+.text-plus-image .image-float-left {
+  margin: 0 50px 0 0;
+  width: 12%;
+  float: left;
+}
+.text-plus-image .image2-float-left {
+  margin: 0 20px 0 0;
+  width: 21%;
+  max-width: 200px;
+  float: left;
+}
+.text-plus-image .image3-float-left {
+  margin: 0 20px 0 0;
+  width: 45%;
+  float: left;
+}
+
+.first-letter {
+  font-size: 4rem;
+}
+
+.hoja-image {
+  width: 100%;
+}
+
+/* --------------------- PROGRAMA */
+
+
+.program-container {
+  column-count: 3;
+  column-span: none;
+  gap: 30px;
+}
+
+.program-box {
+  min-height: 200px;
+  /* max-height: 600px; */
+  width: 100%;
+  background-color: var(--principal-background);
+  padding: 15px 0 15px 0;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 35px;
+  overflow: auto;
+
+  text-align: start;
+}
+
+.date-program-box {
+  color: var(--background-subtitle-color);
+}
+.date-program-box:nth-child(1) {
+  font-family: var(--font-family-bold);
+  font-size: 2.5rem;
+  /* font-weight: bold; */
+}
+.sesion-program-box {
+  color: var(--principal-background);
+  background-color: var(--background-subtitle-color);
+}
+.title-sesion-program {
+  font-family: var(--font-family-bold);
+  line-height: 1.3;
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+.info-invited-program {
+  color: var(--background-subtitle-color);
+}
+.univ-italic {
+  font-style: italic;
+}
+
+.date-program-box, 
+.sesion-program-box, 
+.title_plus_invited-program,
+.program-box span {
+  padding: 0 15px 0 15px;
+}
+/* ---------------------------- FOOTER */
+
+.footer-principal-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  width: 100%;
+  gap: 20px 20px;
+  overflow: auto;
+}
+.ul-footer {
+  list-style: none;
+}
+.footer-box-description {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 0px;
+  width: 100%;
+}
+.footer-box-child {
+  width: 100%;
+}
+.get_and_imani_img {
+  display: flex;
+  gap: 30px;
+  align-self: flex-end;
+}
+.two-images-footer {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+.two-images-footer img {
+  max-height: 165px;
+}
+.unal-logo {
+  align-self: flex-end
+}
+.unal-logo img {
+  max-height: 190px;
+}
+.biblio-nacional-logo {
+  width: 100%;
+}
+footer .footer_link {
+  text-decoration: underline;
+}
+
+/* ---------------------------- MEDIA */
+
+
+@media (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+  main .main-joker-container .info_principal-container {
+    margin-left: 0px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  main .main-joker-container {
+    padding-top: 80px;
+  }
+  .info-box {
+    --padding-sesion: 30px 30px;
+  }
+  .info_principal-container .head-box h2 {
+    font-size: 3.8rem;
+    margin-right: 30px;
+  }
+  .biblio-nacional-logo {
+    width: 70%;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .program-box {
+    margin-bottom: 20px;
+  }
+  .program-container {
+    column-count: 2;
+    gap: 15px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  #hero-video .vjs-big-play-button,
+  #mini-video .vjs-big-play-button {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    transform: translate(5%, -25%);
+  }
+  .info-box {
+    --padding-sesion: 20px 20px;
+  }
+  .info-box .subtitle-presentacion {
+     font-size: 2rem;
+      line-height: 2.8rem;
+  }
+  .first-letter {
+    font-size: 3rem;
+  }
+  .info-box .text-box {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+  .gap { 
+    margin-bottom: 20px;
+  }
+  .info_principal-container .head-box {
+    height: 50px;
+  }
+  .info_principal-container .info-box {
+    gap: 20px;
+  }
+  .info_principal-container .head-box h2 {
+    font-size: 2.8rem;
+    margin-right: 20px;
+  }
+  .backgr-concepto {
+    background-position: 33%;
+  }
+  .program-container {
+    column-count: unset;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scroll-snap-type: x proximity;
+    scrollbar-color: var(--background-subtitle-color) var(--principal-background);
+  }
+  .program-box {
+    min-width: 270px;
+    scroll-snap-align: center; 
+  }
+  .program-container::-webkit-scrollbar {
+    height: 8px;
+    background-color: #c4b26f;
+  }
+  .program-container::-webkit-scrollbar-thumb {
+    background-color: var(--principal-background);
+    border-radius: 10px;
+  }
+  .footer-box-description {
+    gap: 10px 0px;
+  }
+  .footer-principal-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0px 20px;
+  }
+  .two-images-footer {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .two-images-footer img{
+    max-height: none;
+  }
+  .two-images-footer img:nth-child(1) {
+    width: 20%;
+  }
+  .two-images-footer img:nth-child(2) {
+    width: 70%;
+  }
+  .unal-logo img {
+    max-height: none;
+    width: 70%;
+  }
+  .biblio-nacional-logo {
+    max-height: none;
+    width: 100%;
+  }
+  .text-plus-image .image1-float-right {
+    margin: 0 0px 10px 26px;
+    width: 100%;
+  }
+  .text-plus-image .image2-float-left {
+    width: 46%;
+  }
+  .text-plus-image .image3-float-left {
+    width: 100%;
+    margin: 0;
+  }
+  
+}
+
+
+
+
